@@ -33,8 +33,8 @@ function placarPontos() {
   vencedor = document.getElementById("vencedor")
   ataqueButtom = document.getElementById("attackButton");
   let placar = document.querySelector(".pontos");
-  placar.innerHTML = '<div class="placarPontos" id="ponto-jogador2">' + player1Points + '</div>' 
-  + '|' + '<div class="placarPontos" id="ponto-jogador1">' + player2Points + '</div>';
+  placar.innerHTML = '<div class="placarPontos" id="ponto-jogador2" style="color: white;">' + player1Points + '</div>' 
+  + '|' + '<div class="placarPontos" id="ponto-jogador1" style="color: white;">' + player2Points + '</div>';
   console.log(g0)
 
   if (g0 == 3) {
@@ -43,7 +43,7 @@ function placarPontos() {
     ataqueButtom.style = "display: none;";
 
     if (player1Points > player2Points) {
-      vencedor.innerHTML = "Jogador 1 Ganhou"
+      vencedor.innerHTML = "Jogador 1 Ganhou";
     }else if (player1Points < player2Points) {
       vencedor.innerHTML = "Jogador 2 Ganhou"
     }
@@ -63,6 +63,11 @@ function novaPrtida() {
 
 
 function myCard1Function() {
+  let led1 = document.querySelector(".area-card1")
+  let led2 = document.querySelector(".area-card2")
+  led2.style = "animation-name: example;";
+  led1.style = "animation-name: example;";
+
   let ataque1 = parseInt(Math.random() * 100);
   let defesa2 = parseInt(Math.random() * 100);
   let magia3 = parseInt(Math.random() * 100);
@@ -215,7 +220,7 @@ function moveCards() {
   if (oneCard1.checked == true) {
     divBattle01.innerHTML = ca1;
     buttonBattle.disabled = false;
-    oneCardUm.style = "border: 3px solid rgb(255, 129, 0);";
+    oneCardUm.style = "border: 3px solid rgb(255 0 0);";
   }
   if (oneCard1.checked == false) {
     oneCardUm.style = "border: none;";
@@ -224,7 +229,7 @@ function moveCards() {
   if (oneCard2.checked == true) {
     divBattle01.innerHTML = ca2;
     buttonBattle.disabled = false;
-    oneCardDois.style = "border: 3px solid rgb(255, 129, 0);";
+    oneCardDois.style = "border: 3px solid rgb(255 0 0);";
   }else{
     oneCardDois.style = "border: none;";
   };
@@ -232,7 +237,7 @@ function moveCards() {
   if (oneCard3.checked == true) {
     divBattle01.innerHTML = ca3;
     buttonBattle.disabled = false;
-    oneCardTres.style = "border: 3px solid rgb(255, 129, 0);";
+    oneCardTres.style = "border: 3px solid rgb(255 0 0);";
   }else{
     oneCardTres.style = "border: none;";
   };
@@ -240,7 +245,7 @@ function moveCards() {
   if (twoCard1.checked == true) {
    divBattle02.innerHTML = ca4;
    buttonBattle.disabled = false;
-   twoCardQuatro.style = "border: 3px solid rgb(255, 129, 0);";
+   twoCardQuatro.style = "border: 3px solid rgb(255 0 0);";
   }else{
     twoCardQuatro.style = "border: none;";
   };
@@ -248,7 +253,7 @@ function moveCards() {
   if (twoCard2.checked == true) {
    divBattle02.innerHTML = ca5;
    buttonBattle.disabled = false;
-   twoCardCinco.style = "border: 3px solid rgb(255, 129, 0);";
+   twoCardCinco.style = "border: 3px solid rgb(255 0 0);";
   }else{
     twoCardCinco.style = "border: none;";
   };
@@ -256,7 +261,7 @@ function moveCards() {
   if (twoCard3.checked == true) {
     divBattle02.innerHTML = ca6;
     buttonBattle.disabled = false;
-    twoCardSeis.style = "border: 3px solid rgb(255, 129, 0);";
+    twoCardSeis.style = "border: 3px solid rgb(255 0 0);";
   }else{
     twoCardSeis.style = "border: none;";
   }
